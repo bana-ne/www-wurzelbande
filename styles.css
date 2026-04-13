@@ -3,29 +3,131 @@ body {
   margin: 0;
   background: #f4f8f4;
   color: #2f3e2f;
-  text-align: center;
 }
 
-header {
-  background: #6bbf59;
+/* HERO (Magnolia Style) */
+.hero {
+  background: linear-gradient(rgba(58,125,68,0.65), rgba(58,125,68,0.65)),
+              url("Copilot_vision_image.png") center/cover;
   color: white;
-  padding: 40px 20px;
+  text-align: center;
+  padding: 100px 20px 80px;
 }
 
-main {
-  padding: 40px 20px;
-  max-width: 700px;
-  margin: auto;
-}
-
-h1, h2 {
+.hero img {
+  max-width: 110px;
   margin-bottom: 10px;
 }
 
+.hero h1 {
+  margin: 10px 0;
+  font-size: 2.4em;
+  font-weight: 600;
+}
+
+.quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: auto;
+}
+
+section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #3a7d44;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e0efe0;
+  padding-bottom: 5px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  margin-bottom: 25px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+.cta {
+  background: #e8f5e9;
+  border-left: 6px solid #6bbf59;
+}
+
+iframe {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
 footer {
-  margin-top: 40px;
-  padding: 20px;
-  font-size: 0.9em;
+  text-align: center;
+  padding: 40px 10px;
+  font-size: 0.8em;
+  color: #777;
+  border-top: 1px solid #e0e0e0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: #6bbf59;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: #5aa94c;
+  transform: translateY(-1px);
+}
+
+.info-item {
+  margin-bottom: 12px;
+  border-bottom: 1px dashed #cfe3cf;
+  padding-bottom: 8px;
+}
+
+.info-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.info-item p {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #4a5a4a;
+}
+
+/* Pfeil Animation */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+details[open] .arrow {
+  transform: rotate(180deg);
 }
 
 a {
