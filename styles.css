@@ -32,8 +32,9 @@ body {
 
   width: clamp(140px, 22vw, 220px);
   height: clamp(140px, 22vw, 220px);
-
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  
+  /* sanfter Glow */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
   overflow: hidden; /* WICHTIG für Microsoft Edge */
 }
 
