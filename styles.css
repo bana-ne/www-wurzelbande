@@ -8,15 +8,27 @@ body {
 /* HERO (Magnolia Style) */
 .hero {
   background: linear-gradient(rgba(58,125,68,0.65), rgba(58,125,68,0.65)),
-              url("Copilot_vision_image.png") center/cover;
+              url("Copilot_vision_image.png") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px 80px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero img {
-  max-width: 110px;
-  margin-bottom: 10px;
+  width: clamp(120px, 20vw, 200px); /* responsive Größe */
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+
+  background: white;
+  border-radius: 50%;
+  padding: 20px;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.15); /* optional */
 }
 
 .hero h1 {
