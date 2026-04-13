@@ -33,15 +33,17 @@ body {
   width: clamp(140px, 22vw, 220px);
   height: clamp(140px, 22vw, 220px);
 
+  border-radius: 50%;
   box-shadow: 0 0 8px rgba(0,0,0,0.15);
   overflow: hidden; /* WICHTIG für Microsoft Edge */
 }
 
 /* LOGO IM KREIS */
 .logo-circle img {
-  width: 80%;
-  height: 80%;
+  width: 96%;   /* Logo minimal kleiner → dünner Kreis sichtbar */
+  height: 96%;
   object-fit: contain;
+  border-radius: 50%;
   display: block;
 }
 
