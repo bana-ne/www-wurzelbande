@@ -36,6 +36,13 @@ body {
   }
 }
 
+.logo-white-bg {
+  width: clamp(120px, 20vw, 220px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* WEISSER KREIS UM DAS LOGO */
 .logo-circle {
   background: white;
