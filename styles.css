@@ -43,13 +43,22 @@ body {
   align-items: center;
   width: 100%;
   margin-bottom: 20px; /* Abstand zum Text */
+  /* sanfter Glow */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+  overflow: hidden; /* WICHTIG für Microsoft Edge */
 }
 
 /* LOGO (PNG mit weißem Kreis) */
 .logo-white-bg img {
-  width: clamp(120px, 18vw, 180px);
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
   height: auto;
+  object-fit: contain;
   display: block;
+  margin: 0 auto;
+  width: clamp(140px, 22vw, 220px);
+  height: clamp(140px, 22vw, 220px);
 }
 
 /* WEISSER KREIS UM DAS LOGO */
