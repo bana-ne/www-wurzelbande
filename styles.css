@@ -42,8 +42,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  width: clamp(120px, 18vw, 180px);
-  height: clamp(120px, 18vw, 180px);
+  width: clamp(120px, 23vw, 180px);
+  height: clamp(120px, 23vw, 180px);
 
   border-radius: 50%;
   overflow: hidden; /* wichtig für Edge */
@@ -54,7 +54,7 @@ body {
 }
 
 .logo-white-bg img {
-  width: clamp(120px, 18vw, 180px);
+  width: clamp(120px, 23vw, 180px);
   height: auto;
   display: block;
 }
