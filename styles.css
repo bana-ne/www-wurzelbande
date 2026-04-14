@@ -162,3 +162,22 @@ a {
   color: #3a7d44;
   text-decoration: none;
 }
+
+/* Desktop */
+#map-desktop { display: block; }
+#map-tablet { display: none; }
+#map-mobile { display: none; }
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #map-desktop { display: none; }
+  #map-tablet { display: block; }
+  #map-mobile { display: none; }
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  #map-desktop { display: none; }
+  #map-tablet { display: none; }
+  #map-mobile { display: block; }
+}
