@@ -41,17 +41,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+
+  width: clamp(120px, 18vw, 180px);
+  height: clamp(120px, 18vw, 180px);
+
+  border-radius: 50%;
+  overflow: hidden; /* wichtig für Edge */
   margin-bottom: 20px;
-  overflow: hidden; /* WICHTIG für Microsoft Edge */
+
+  /* Glow round */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
 }
 
 .logo-white-bg img {
   width: clamp(120px, 18vw, 180px);
   height: auto;
   display: block;
-  /* Add glow */
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
 }
 
 /* WEISSER KREIS UM DAS LOGO */
