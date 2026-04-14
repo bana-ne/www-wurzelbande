@@ -43,15 +43,15 @@ body {
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
-
-  /* Glow darf bleiben */
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+  overflow: hidden; /* WICHTIG für Microsoft Edge */
 }
 
 .logo-white-bg img {
   width: clamp(120px, 18vw, 180px);
   height: auto;
   display: block;
+  /* Add glow */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
 }
 
 /* WEISSER KREIS UM DAS LOGO */
