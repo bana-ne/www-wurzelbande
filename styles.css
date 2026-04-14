@@ -36,13 +36,20 @@ body {
   }
 }
 
+/* LOGO-WRAPPER (zentriert + kontrollierte Größe) */
 .logo-white-bg {
-  width: clamp(120px, 20vw, 220px);
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 20px; /* Abstand zum Text */
+}
+
+/* LOGO (PNG mit weißem Kreis) */
+.logo-white-bg img {
+  width: clamp(120px, 18vw, 180px);
+  height: auto;
+  display: block;
 }
 
 /* WEISSER KREIS UM DAS LOGO */
