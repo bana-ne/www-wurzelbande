@@ -39,7 +39,9 @@ body {
 .logo-white-bg {
   width: clamp(120px, 20vw, 220px);
   height: auto;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 
