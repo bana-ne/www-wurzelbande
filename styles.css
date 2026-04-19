@@ -5,10 +5,12 @@ body {
   color: #2f3e2f;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 1px;
+  transform: scale(1.05); /* 5% größer */
+  transform-origin: left; /* verhindert Verschiebung */
 }
 
 /* HERO (Magnolia Style) */
