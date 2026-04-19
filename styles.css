@@ -5,6 +5,10 @@ body {
   color: #2f3e2f;
 }
 
+h1, h2, h3 {
+  font-family: 'Amatic SC', cursive;
+}
+
 /* HERO (Magnolia Style) */
 .hero {
   background: linear-gradient(rgba(58,125,68,0.65), rgba(58,125,68,0.65)),
