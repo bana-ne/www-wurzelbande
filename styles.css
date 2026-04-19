@@ -7,6 +7,8 @@ body {
 
 h1, h2, h3 {
   font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* HERO (Magnolia Style) */
@@ -235,4 +237,12 @@ a {
   #map-desktop { display: none; }
   #map-tablet { display: none; }
   #map-mobile { display: block; }
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor; /* übernimmt automatisch die Textfarbe */
+  vertical-align: middle;
+  margin-right: 8px;
 }
