@@ -9,7 +9,7 @@ h1, h2 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 1px;
-  transform: scale(1.05); /* 5% größer */
+  transform: scale(1.10); /* 5% größer */
   transform-origin: left; /* verhindert Verschiebung */
 }
 
