@@ -392,14 +392,21 @@ a {
 
 .kaefer-walk {
   position: fixed;
-  width: 48px;
-  height: 48px;
+  width: 12px;
+  height: 12px;
   left: calc(50vw - 24px);
   top: calc(50vh - 24px);
   pointer-events: none;
 
-  animation: kaefer-circle 6s linear infinite;
-  transform-origin: 200px 200px; /* Radius des Kreises */
+  /* Wellenlinien-Pfad */
+  offset-path: path("M 0 200 
+    C 150 100, 300 300, 450 200
+    S 750 100, 900 200
+    S 1050 300, 1200 200
+    S 1350 100, 1500 200");
+
+  offset-rotate: auto;
+  animation: kaefer-lauf 6s linear infinite;
 }
 
 .kaefer-frame {
@@ -431,15 +438,8 @@ a {
   100% { opacity: 0; }
 }
 
-@keyframes kaefer-krabbelt {
-  0%   { transform: translateX(0) translateY(0); }
-  25%  { transform: translateX(30vw) translateY(-2px); }
-  50%  { transform: translateX(60vw) translateY(0); }
-  75%  { transform: translateX(90vw) translateY(2px); }
-  100% { transform: translateX(110vw) translateY(0); }
+@keyframes kaefer-lauf {
+  0%   { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
 }
 
-@keyframes kaefer-circle {
-  0%   { transform: rotate(0deg) translateX(200px) rotate(0deg); }
-  100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
-}
