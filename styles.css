@@ -415,24 +415,26 @@ a {
   height: 100%;
   left: 0;
   top: 0;
+  object-fit: contain;
 }
 
+/* Frame 1 sichtbar → unsichtbar → sichtbar */
 .frame1 {
-  animation: kaefer-legs-1 0.25s infinite;
+  animation: legs1 0.25s steps(1) infinite;
 }
 
+/* Frame 2 unsichtbar → sichtbar → unsichtbar */
 .frame2 {
-  animation: kaefer-legs-2 0.25s infinite;
-  opacity: 0;
+  animation: legs2 0.25s steps(1) infinite;
 }
 
-@keyframes kaefer-legs-1 {
+@keyframes legs1 {
   0%   { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 1; }
 }
 
-@keyframes kaefer-legs-2 {
+@keyframes legs2 {
   0%   { opacity: 0; }
   50%  { opacity: 1; }
   100% { opacity: 0; }
