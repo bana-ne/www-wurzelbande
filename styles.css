@@ -392,12 +392,14 @@ a {
 
 .kaefer-walk {
   position: fixed;
-  width: 48px;   /* hier skalierst du beide SVGs runter */
+  width: 48px;
   height: 48px;
-  bottom: 20px;
-  left: -60px;
+  left: calc(50vw - 24px);
+  top: calc(50vh - 24px);
   pointer-events: none;
-  animation: kaefer-krabbelt 12s linear infinite;
+
+  animation: kaefer-circle 6s linear infinite;
+  transform-origin: 200px 200px; /* Radius des Kreises */
 }
 
 .kaefer-frame {
@@ -408,12 +410,10 @@ a {
   top: 0;
 }
 
-/* Frame 1 */
 .frame1 {
   animation: kaefer-legs-1 0.25s infinite;
 }
 
-/* Frame 2 */
 .frame2 {
   animation: kaefer-legs-2 0.25s infinite;
   opacity: 0;
@@ -437,4 +437,9 @@ a {
   50%  { transform: translateX(60vw) translateY(0); }
   75%  { transform: translateX(90vw) translateY(2px); }
   100% { transform: translateX(110vw) translateY(0); }
+}
+
+@keyframes kaefer-circle {
+  0%   { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
 }
