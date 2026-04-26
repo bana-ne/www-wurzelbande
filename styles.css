@@ -397,6 +397,12 @@ a {
   pointer-events: none;
 
   /* Wellenlinie */
+.kaefer-walk {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+
   offset-path: path("M 0 200 
     C 150 100, 300 300, 450 200
     S 750 100, 900 200
@@ -435,6 +441,13 @@ a {
   50%  { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* PFAD-ANIMATION */
+@keyframes kaefer-lauf {
+  0%   { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
+}
+
 
 /* PFAD-ANIMATION */
 @keyframes kaefer-lauf {
