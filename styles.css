@@ -385,3 +385,8 @@ a {
   }
 }
 
+/* Käfer laufen lassen*/
+.cursor-kaefer {
+  cursor: url("kaefer-cursor.svg") 32 32, auto;
+}
+
