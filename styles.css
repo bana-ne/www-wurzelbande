@@ -430,3 +430,11 @@ a {
   50%  { opacity: 1; }
   100% { opacity: 0; }
 }
+
+@keyframes kaefer-krabbelt {
+  0%   { transform: translateX(0) translateY(0); }
+  25%  { transform: translateX(30vw) translateY(-2px); }
+  50%  { transform: translateX(60vw) translateY(0); }
+  75%  { transform: translateX(90vw) translateY(2px); }
+  100% { transform: translateX(110vw) translateY(0); }
+}
