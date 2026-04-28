@@ -252,8 +252,8 @@ a {
 }
 
 .icon {
-  width: 22px;
-  height: 22px;
+  width: 1em;
+  height: 1em;
   fill: currentColor; /* übernimmt automatisch die Textfarbe */
   vertical-align: middle;
   margin-right: 8px;
