@@ -5,11 +5,22 @@ body {
   color: #2f3e2f;
 }
 
-h1, h2 {
+h1 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 1px;
-  font-size: 1.2em;
+  font-size: 2.4em; /* oder was du willst */
+  color: #3a7d44;
+  margin-bottom: 20px;
+  border: none; /* wichtig */
+  padding-bottom: 0;
+}
+
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.2em; /* 20% größer */
   display: block;
   box-sizing: border-box;
   width: 100%;
