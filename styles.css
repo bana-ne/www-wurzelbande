@@ -127,6 +127,9 @@ section {
 }
 
 h2 {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
   color: #3a7d44;
   margin-bottom: 10px;
   border-bottom: 2px solid #e0efe0;
