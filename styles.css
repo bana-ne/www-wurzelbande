@@ -9,8 +9,22 @@ h1, h2 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+h1 {
   transform: scale(1.20); /* 5% größer */
   transform-origin: left; /* verhindert Verschiebung */
+}
+
+h2 {
+  font-size: 1.2em
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  color: #3a7d44;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e0efe0;
+  padding-bottom: 5px;
 }
 
 /* HERO (Magnolia Style) */
@@ -124,16 +138,6 @@ section {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 20px;
-}
-
-h2 {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  color: #3a7d44;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #e0efe0;
-  padding-bottom: 5px;
 }
 
 .card {
