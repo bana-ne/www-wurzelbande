@@ -11,12 +11,7 @@ h1, h2 {
   letter-spacing: 1px;
 }
 
-h1 {
-  transform: scale(1.20); /* 5% größer */
-  transform-origin: left; /* verhindert Verschiebung */
-}
-
-h2 {
+h1, h2 {
   font-size: 1.2em;
   display: block;
   box-sizing: border-box;
