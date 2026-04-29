@@ -1,3 +1,7 @@
+/* -------------------------------------------------- */
+/* 1. GLOBAL STYLES & TYPOGRAFIE */
+/* -------------------------------------------------- */
+
 body {
   font-family: 'Nunito', sans-serif;
   margin: 0;
@@ -5,32 +9,38 @@ body {
   color: #2f3e2f;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 1px;
-  font-size: 2.4em; /* oder was du willst */
   color: #3a7d44;
+}
+
+h1 {
+  font-size: 2.4em;
   margin-bottom: 20px;
-  border: none; /* wichtig */
-  padding-bottom: 0;
 }
 
 h2 {
-  font-family: 'Amatic SC', cursive;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 2.0em; /* 20% größer */
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  color: #3a7d44;
+  font-size: 2em;
   margin-bottom: 10px;
-  border-bottom: 2px solid #e0efe0;
   padding-bottom: 5px;
+  border-bottom: 2px solid #e0efe0;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* HERO (Magnolia Style) */
+a {
+  color: #3a7d44;
+  text-decoration: none;
+}
+
+
+/* -------------------------------------------------- */
+/* 2. HERO (Magnolia Style) */
+/* -------------------------------------------------- */
+
 .hero {
   background: linear-gradient(rgba(58,125,68,0.65), rgba(58,125,68,0.65)),
               url("Copilot_vision_image.png") center/cover no-repeat;
@@ -45,77 +55,8 @@ h2 {
   justify-content: center;
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero {
-    height: 45vh;
-    padding: 50px 20px 30px;
-  }
-}
-
-/* Mobil */
-@media (max-width: 768px) {
-  .hero {
-    height: 40vh;
-    padding: 40px 20px 20px;
-  }
-}
-
-/* LOGO-WRAPPER (zentriert + kontrollierte Größe) */
-.logo-white-bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: clamp(140px, 23vw, 240px);
-  height: clamp(140px, 23vw, 240px);
-
-  border-radius: 50%;
-  overflow: hidden; /* wichtig für Edge */
-  margin-bottom: 20px;
-
-  /* Glow round */
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
-}
-
-.logo-white-bg img {
-  width: clamp(140px, 23vw, 240px);
-  height: auto;
-  display: block;
-}
-
-/* WEISSER KREIS UM DAS LOGO */
-.logo-circle {
-  background: white;
-  border-radius: 50%;
-  padding: 3px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: clamp(140px, 22vw, 220px);
-  height: clamp(140px, 22vw, 220px);
-  
-  /* sanfter Glow */
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
-  overflow: hidden; /* WICHTIG für Microsoft Edge */
-}
-
-/* LOGO IM KREIS */
-.logo-circle img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-
 .hero h1 {
   margin: 10px 0;
-  font-size: 2.4em;
   font-weight: 600;
 }
 
@@ -125,17 +66,40 @@ h2 {
   max-width: 600px;
   margin: auto;
   line-height: 1.3;
-
-  /* Outline automatisch in Textfarbe */
   -webkit-text-stroke: 0.4px currentColor;
-
-  /* Cross-Browser Fake-Bold */
   text-shadow:
     0.3px 0.3px 0 currentColor,
     -0.3px 0.3px 0 currentColor,
     0.3px -0.3px 0 currentColor,
     -0.3px -0.3px 0 currentColor;
 }
+
+
+/* -------------------------------------------------- */
+/* 3. LOGO */
+/* -------------------------------------------------- */
+
+.logo-white-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(140px, 23vw, 240px);
+  height: clamp(140px, 23vw, 240px);
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+}
+
+.logo-white-bg img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* -------------------------------------------------- */
+/* 4. SECTIONS & CARDS */
+/* -------------------------------------------------- */
 
 section {
   max-width: 900px;
@@ -168,30 +132,10 @@ iframe {
   margin-top: 10px;
 }
 
-footer {
-  text-align: center;
-  padding: 40px 10px;
-  font-size: 0.8em;
-  color: #777;
-  border-top: 1px solid #e0e0e0;
-}
 
-.button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 22px;
-  background: #6bbf59;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: 0.2s;
-}
-
-.button:hover {
-  background: #5aa94c;
-  transform: translateY(-1px);
-}
+/* -------------------------------------------------- */
+/* 5. INFO-ITEMS (Accordion) */
+/* -------------------------------------------------- */
 
 .info-item {
   margin-bottom: 12px;
@@ -218,7 +162,6 @@ footer {
   color: #4a5a4a;
 }
 
-/* Pfeil Animation */
 .arrow {
   transition: transform 0.3s ease;
 }
@@ -227,39 +170,24 @@ details[open] .arrow {
   transform: rotate(180deg);
 }
 
-a {
-  color: #3a7d44;
-  text-decoration: none;
-}
 
-/* Desktop */
-#map-desktop { display: block; }
-#map-tablet { display: none; }
-#map-mobile { display: none; }
-
-/* Tablet */
-@media (max-width: 1024px) {
-  #map-desktop { display: none; }
-  #map-tablet { display: block; }
-  #map-mobile { display: none; }
-}
-
-/* Mobil */
-@media (max-width: 768px) {
-  #map-desktop { display: none; }
-  #map-tablet { display: none; }
-  #map-mobile { display: block; }
-}
+/* -------------------------------------------------- */
+/* 6. ICONS */
+/* -------------------------------------------------- */
 
 .icon {
-  width: 1em;
-  height: 1em;
-  fill: currentColor; /* übernimmt automatisch die Textfarbe */
+  width: 1.3em;
+  height: 1.3em;
+  fill: currentColor;
   vertical-align: middle;
   margin-right: 8px;
 }
 
-/* --- Layout der gesamten Sektion --- */
+
+/* -------------------------------------------------- */
+/* 7. WERTE-SEKTION */
+/* -------------------------------------------------- */
+
 .werte {
   padding: 4rem 1rem;
   max-width: 1200px;
@@ -272,53 +200,12 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-
-/* --- Einzelne Karten --- */
 .werte-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 14px;
   padding: 2rem 1.8rem;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.werte-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-.werte-card h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: #2b2b2b;
-}
-
-.werte-card p {
-  line-height: 1.55;
-  color: #444;
-  font-size: 1rem;
-}
-
-
-/* --- Icon-Styling --- */
-.werte-icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 1rem;
-}
-
-.werte-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-  color: #2b2b2b;
-}
-
-
-/* --- Sanfte Fade-Up Animation --- */
-.werte-card {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeUp 0.6s ease forwards;
@@ -335,122 +222,147 @@ a {
   }
 }
 
-
-/* -------------------------------------------------- */
-/* --- MOBILE OPTIMIERUNG --- */
-/* -------------------------------------------------- */
-
-@media (max-width: 768px) {
-
-  .werte {
-    padding: 3rem 1rem;
-  }
-
-  .werte-card {
-    padding: 1.6rem 1.4rem;
-  }
-
-  .werte-card h3 {
-    font-size: 1.25rem;
-  }
-
-  .werte-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .werte-icon {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 0.8rem;
-  }
+.werte-card h3 {
+  margin: 1rem 0 0.8rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #2b2b2b;
 }
 
-@media (max-width: 480px) {
-
-  .werte {
-    padding: 2.5rem 0.5rem;
-  }
-
-  .werte-grid {
-    gap: 1.8rem;
-  }
-
-  .werte-card {
-    padding: 1.4rem 1.2rem;
-    border-radius: 12px;
-  }
-
-  .werte-card h3 {
-    font-size: 1.15rem;
-  }
-
-  .werte-card p {
-    font-size: 0.9rem;
-  }
-
-  .werte-icon {
-    width: 44px;
-    height: 44px;
-  }
+.werte-card p {
+  line-height: 1.55;
+  color: #444;
+  font-size: 1rem;
 }
 
-/* Käfer-Cursor */
+.werte-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.werte-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  color: #2b2b2b;
+}
+
+
+/* -------------------------------------------------- */
+/* 8. FOOTER & BUTTONS */
+/* -------------------------------------------------- */
+
+footer {
+  text-align: center;
+  padding: 40px 10px;
+  font-size: 0.8em;
+  color: #777;
+  border-top: 1px solid #e0e0e0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: #6bbf59;
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: #5aa94c;
+  transform: translateY(-1px);
+}
+
+
+/* -------------------------------------------------- */
+/* 9. MAP VISIBILITY */
+/* -------------------------------------------------- */
+
+#map-desktop { display: block; }
+#map-tablet { display: none; }
+#map-mobile { display: none; }
+
+
+/* -------------------------------------------------- */
+/* 10. KÄFER-ANIMATION */
+/* -------------------------------------------------- */
+
 .cursor-kaefer {
   cursor: url("kaefer-cursor.svg") 32 32, auto;
 }
 
-/* Käfer, der über den Bildschirm läuft */
 .kaefer-walk {
   position: fixed;
   width: 20px;
   height: 20px;
   pointer-events: none;
-
-  /* Wellenlinie */
   offset-path: path("M -200 200 
     C 150 100, 300 300, 450 200
     S 750 100, 900 200
     S 1050 300, 1200 200
     S 1350 100, 1500 200
     S 1700 300, 1900 200");
-
   offset-rotate: auto;
   animation: kaefer-lauf 8s linear infinite;
 }
 
-/* Animation: Käfer läuft von links nach rechts und verschwindet */
 @keyframes kaefer-lauf {
   0%   { offset-distance: 0%; opacity: 1; }
   90%  { opacity: 1; }
   100% { offset-distance: 100%; opacity: 0; }
 }
 
-/* Beinchen-Frames */
 .kaefer-frame {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
 }
 
-.frame1 {
-  animation: legs1 0.25s steps(1) infinite;
-}
-
-.frame2 {
-  animation: legs2 0.25s steps(1) infinite;
-}
+.frame1 { animation: legs1 0.25s steps(1) infinite; }
+.frame2 { animation: legs2 0.25s steps(1) infinite; }
 
 @keyframes legs1 {
-  0%   { opacity: 1; }
-  50%  { opacity: 0; }
-  100% { opacity: 1; }
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
 }
 
 @keyframes legs2 {
-  0%   { opacity: 0; }
-  50%  { opacity: 1; }
-  100% { opacity: 0; }
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
+}
+
+
+/* -------------------------------------------------- */
+/* 11. MEDIA QUERIES */
+/* -------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .hero { height: 45vh; padding: 50px 20px 30px; }
+  #map-desktop { display: none; }
+  #map-tablet { display: block; }
+}
+
+@media (max-width: 768px) {
+  .hero { height: 40vh; padding: 40px 20px 20px; }
+  #map-tablet { display: none; }
+  #map-mobile { display: block; }
+
+  .werte { padding: 3rem 1rem; }
+  .werte-card { padding: 1.6rem 1.4rem; }
+  .werte-card h3 { font-size: 1.25rem; }
+  .werte-card p { font-size: 0.95rem; line-height: 1.6; }
+  .werte-icon { width: 52px; height: 52px; }
+}
+
+@media (max-width: 480px) {
+  .werte { padding: 2.5rem 0.5rem; }
+  .werte-grid { gap: 1.8rem; }
+  .werte-card { padding: 1.4rem 1.2rem; border-radius: 12px; }
+  .werte-card h3 { font-size: 1.15rem; }
+  .werte-card p { font-size: 0.9rem; }
+  .werte-icon { width: 44px; height: 44px; }
 }
