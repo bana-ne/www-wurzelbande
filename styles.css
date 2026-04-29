@@ -395,35 +395,38 @@ a {
   }
 }
 
-/* Käfer laufen lassen*/
+/* Käfer-Cursor */
 .cursor-kaefer {
   cursor: url("kaefer-cursor.svg") 32 32, auto;
 }
 
+/* Käfer, der über den Bildschirm läuft */
 .kaefer-walk {
   position: fixed;
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   pointer-events: none;
 
   /* Wellenlinie */
-.kaefer-walk {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  pointer-events: none;
-
-  offset-path: path("M 0 200 
+  offset-path: path("M -200 200 
     C 150 100, 300 300, 450 200
     S 750 100, 900 200
     S 1050 300, 1200 200
-    S 1350 100, 1500 200");
+    S 1350 100, 1500 200
+    S 1700 300, 1900 200");
 
   offset-rotate: auto;
-  animation: kaefer-lauf 6s linear infinite;
+  animation: kaefer-lauf 8s linear infinite;
 }
 
-/* FRAME-WECHSEL */
+/* Animation: Käfer läuft von links nach rechts und verschwindet */
+@keyframes kaefer-lauf {
+  0%   { offset-distance: 0%; opacity: 1; }
+  90%  { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+/* Beinchen-Frames */
 .kaefer-frame {
   position: absolute;
   width: 100%;
@@ -450,17 +453,4 @@ a {
   0%   { opacity: 0; }
   50%  { opacity: 1; }
   100% { opacity: 0; }
-}
-
-/* PFAD-ANIMATION */
-@keyframes kaefer-lauf {
-  0%   { offset-distance: 0%; }
-  100% { offset-distance: 100%; }
-}
-
-
-/* PFAD-ANIMATION */
-@keyframes kaefer-lauf {
-  0%   { offset-distance: 0%; }
-  100% { offset-distance: 100%; }
 }
