@@ -291,35 +291,30 @@ footer {
 /* 10. KÄFER-ANIMATION */
 /* -------------------------------------------------- */
 
+/* Käfer-Cursor (optional) */
 .cursor-kaefer {
   cursor: url("kaefer-cursor.svg") 32 32, auto;
 }
 
+/* Käfer, der im Kreis läuft */
 .kaefer-walk {
   position: fixed;
   width: 20px;
   height: 20px;
   pointer-events: none;
-  offset-path: path("M -200 200 
-    C 150 100, 300 300, 450 200
-    S 750 100, 900 200
-    S 1050 300, 1200 200
-    S 1350 100, 1500 200
-    S 1700 300, 1900 200");
-  offset-rotate: auto;
-  animation: kaefer-lauf 8s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: kaefer-kreis 6s linear infinite;
 }
 
-@keyframes kaefer-lauf {
-  0%   { offset-distance: 0%; opacity: 1; }
-  90%  { opacity: 1; }
-  100% { offset-distance: 100%; opacity: 0; }
-}
-
+/* Beinchen-Frames */
 .kaefer-frame {
   position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .frame1 { animation: legs1 0.25s steps(1) infinite; }
@@ -335,6 +330,20 @@ footer {
   50%      { opacity: 1; }
 }
 
+/* Kreisbahn + Ausblenden */
+@keyframes kaefer-kreis {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(150px);
+    opacity: 0;
+  }
+}
 
 /* -------------------------------------------------- */
 /* 11. MEDIA QUERIES */
