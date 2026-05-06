@@ -460,9 +460,23 @@ footer {
   transform: scale(1.02);
 }
 
-}
-
 .cta-button:hover {
   background: #6bbf59; /* Wechsel zu deinem helleren Grün */
   transform: scale(1.02);
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    font-size: 1.2em;
+  }
+}
+
+/* CTA – Abstände optimieren */
+.cta-section .action-box h3 {
+  margin-top: 10px;
+  margin-bottom: 8px; /* vorher ~20px */
+}
+
+.cta-section .task-list {
+  margin-top: 10px;   /* vorher 20px */
 }
