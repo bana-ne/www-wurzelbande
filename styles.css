@@ -440,7 +440,7 @@ footer {
   line-height: 1.4;
 }
 
-/* CTA Button – passt jetzt überall */
+/* CTA Button – harmonisch und zentriert */
 .cta-button {
   display: block;
   width: 100%;
@@ -456,6 +456,7 @@ footer {
   border-radius: 50px;
   transition: background 0.2s, transform 0.2s;
   box-sizing: border-box; /* verhindert Überlaufen */
+  border: none;
 }
 
 .cta-button:hover {
