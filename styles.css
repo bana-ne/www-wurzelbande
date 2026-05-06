@@ -388,3 +388,64 @@ footer {
   .werte-card p { font-size: 0.9rem; }
   .werte-icon { width: 44px; height: 44px; }
 }
+
+
+/* --- CTA-OPTIMIERUNG (Persönlich & Klar) --- */
+
+.cta-section {
+  margin-top: 40px;
+  padding: 0 15px;
+}
+
+.card.highlight-card {
+  background: #ffffff;
+  border: 3px solid #3a7d44; /* Dein dunkles Grün */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.urgent-note {
+  font-weight: 700;
+  color: #3a7d44; 
+  background: #e8f5e9; /* Dein helles Grün */
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.task-list li {
+  background: #f4f8f4; /* Dein Body-Hintergrund */
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 5px solid #6bbf59; /* Dein mittleres Grün */
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: 30px auto 10px;
+  padding: 15px 20px;
+  background: #3a7d44; /* Dein Haupt-Grün */
+  color: #ffffff !important;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: #6bbf59; /* Wechsel zu deinem helleren Grün */
+  transform: scale(1.02);
+}
