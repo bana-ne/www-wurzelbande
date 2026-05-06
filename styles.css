@@ -248,6 +248,37 @@ details[open] .arrow {
   color: #2b2b2b;
 }
 
+/* -------------------------------------------------- */
+/* GOOGLE FORM – BESSERE BREITE & MOBILOPTIMIERUNG */
+/* -------------------------------------------------- */
+
+.google-form-wrapper {
+  width: 100%;
+  max-width: 900px;     /* gleiche Breite wie deine Sections */
+  margin: 0 auto;
+  padding: 0;           /* kein unnötiger Rand */
+}
+
+.google-form-wrapper iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  height: 1100px;       /* kann angepasst werden */
+  border: none;
+  border-radius: 12px;
+}
+
+/* Mobil: mehr Höhe, weniger Rand */
+@media (max-width: 480px) {
+  .google-form-wrapper {
+    padding: 0;
+  }
+
+  .google-form-wrapper iframe {
+    height: 1300px;     /* Google Forms sind hoch */
+    border-radius: 10px;
+  }
+}
 
 /* -------------------------------------------------- */
 /* 8. FOOTER & BUTTONS */
