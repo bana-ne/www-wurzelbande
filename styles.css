@@ -389,7 +389,6 @@ footer {
   .werte-icon { width: 44px; height: 44px; }
 }
 
-
 /* -------------------------------------------------- */
 /* CTA – Mitmachen / Gründungs-Crew */
 /* -------------------------------------------------- */
@@ -405,6 +404,7 @@ footer {
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   border-radius: 16px;
   padding: 25px;
+  overflow: hidden; /* verhindert Überstehen */
 }
 
 .urgent-note {
@@ -418,7 +418,8 @@ footer {
 }
 
 .action-box h3 {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 8px; /* kompakter */
   font-size: 1.4em;
   color: #3a7d44;
 }
@@ -426,7 +427,7 @@ footer {
 .task-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 10px 0; /* kompakter */
 }
 
 .task-list li {
@@ -442,8 +443,8 @@ footer {
 .cta-button {
   display: block;
   width: 100%;
-  max-width: 350px;
-  margin: 30px auto 10px;
+  max-width: 100%; /* Button bleibt in der Box */
+  margin: 25px auto 10px;
   padding: 15px 20px;
   background: #3a7d44;
   color: #ffffff !important;
@@ -460,23 +461,41 @@ footer {
   transform: scale(1.02);
 }
 
-.cta-button:hover {
-  background: #6bbf59; /* Wechsel zu deinem helleren Grün */
-  transform: scale(1.02);
-}
+
+/* -------------------------------------------------- */
+/* MOBILE OPTIMIERUNG – CTA KOMPAKTER */
+/* -------------------------------------------------- */
 
 @media (max-width: 480px) {
-  .cta-button {
+
+  .highlight-card {
+    padding: 18px 16px; /* weniger Innenabstand */
+    border-width: 2px;  /* dezenter */
+  }
+
+  .urgent-note {
+    padding: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .action-box h3 {
     font-size: 1.2em;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  .task-list li {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .cta-button {
+    font-size: 1.3em;     /* kleiner */
+    padding: 12px 16px;   /* kompakter */
+    max-width: 260px;     /* harmonisch */
+    margin-top: 20px;
   }
 }
 
-/* CTA – Abstände optimieren */
-.cta-section .action-box h3 {
-  margin-top: 10px;
-  margin-bottom: 8px; /* vorher ~20px */
-}
-
-.cta-section .task-list {
-  margin-top: 10px;   /* vorher 20px */
-}
