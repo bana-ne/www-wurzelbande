@@ -440,20 +440,22 @@ footer {
   line-height: 1.4;
 }
 
+/* CTA Button – passt jetzt überall */
 .cta-button {
   display: block;
   width: 100%;
-  max-width: 100%; /* Button bleibt in der Box */
+  max-width: 280px;     /* feste Breite, passt in jede Card */
   margin: 25px auto 10px;
-  padding: 15px 20px;
+  padding: 14px 18px;
   background: #3a7d44;
   color: #ffffff !important;
   text-align: center;
   font-family: 'Amatic SC', cursive;
-  font-size: 1.8em;
+  font-size: 1.6em;     /* harmonischer als 1.8em */
   font-weight: 700;
   border-radius: 50px;
   transition: background 0.2s, transform 0.2s;
+  box-sizing: border-box; /* verhindert Überlaufen */
 }
 
 .cta-button:hover {
@@ -469,8 +471,8 @@ footer {
 @media (max-width: 480px) {
 
   .highlight-card {
-    padding: 18px 16px; /* weniger Innenabstand */
-    border-width: 2px;  /* dezenter */
+    padding: 18px 16px;
+    border-width: 2px;
   }
 
   .urgent-note {
@@ -492,10 +494,10 @@ footer {
   }
 
   .cta-button {
-    font-size: 1.3em;     /* kleiner */
-    padding: 12px 16px;   /* kompakter */
-    max-width: 260px;     /* harmonisch */
-    margin-top: 20px;
+    max-width: 240px;
+    font-size: 1.3em;
+    padding: 12px 16px;
+    margin-top: 18px;
   }
 }
 
