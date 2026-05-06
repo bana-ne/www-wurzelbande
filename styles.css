@@ -390,59 +390,76 @@ footer {
 }
 
 
-/* --- CTA-OPTIMIERUNG (Persönlich & Klar) --- */
+/* -------------------------------------------------- */
+/* CTA – Mitmachen / Gründungs-Crew */
+/* -------------------------------------------------- */
 
 .cta-section {
-  margin-top: 40px;
-  padding: 0 15px;
+  margin-top: 40px;
+  padding: 0 15px;
 }
 
-.card.highlight-card {
-  background: #ffffff;
-  border: 3px solid #3a7d44; /* Dein dunkles Grün */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+.highlight-card {
+  background: #ffffff;
+  border: 3px solid #3a7d44;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 25px;
 }
 
 .urgent-note {
-  font-weight: 700;
-  color: #3a7d44; 
-  background: #e8f5e9; /* Dein helles Grün */
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  text-align: center;
+  font-weight: 700;
+  color: #3a7d44;
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.action-box h3 {
+  margin-top: 20px;
+  font-size: 1.4em;
+  color: #3a7d44;
 }
 
 .task-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }
 
 .task-list li {
-  background: #f4f8f4; /* Dein Body-Hintergrund */
-  padding: 12px 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  border-left: 5px solid #6bbf59; /* Dein mittleres Grün */
-  font-size: 1rem;
-  line-height: 1.4;
+  background: #f4f8f4;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 5px solid #6bbf59;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .cta-button {
-  display: block;
-  width: 100%;
-  max-width: 350px;
-  margin: 30px auto 10px;
-  padding: 15px 20px;
-  background: #3a7d44; /* Dein Haupt-Grün */
-  color: #ffffff !important;
-  text-align: center;
-  font-family: 'Amatic SC', cursive;
-  font-size: 1.8em;
-  font-weight: 700;
-  border-radius: 50px;
-  transition: background 0.2s, transform 0.2s;
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: 30px auto 10px;
+  padding: 15px 20px;
+  background: #3a7d44;
+  color: #ffffff !important;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: #6bbf59;
+  transform: scale(1.02);
+}
+
 }
 
 .cta-button:hover {
