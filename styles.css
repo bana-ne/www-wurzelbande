@@ -535,8 +535,9 @@ footer {
 }
 
 /* -------------------------------------------------- */
-/* 12. REINER CSS-CAROUSEL (OHNE JS) */
+/* 12. MODERNER CSS-SNAP-SLIDER (OHNE REDUNDANZ) */
 /* -------------------------------------------------- */
+
 .review-carousel-section {
   max-width: 900px;
   margin: 60px auto;
@@ -544,15 +545,26 @@ footer {
   box-sizing: border-box;
 }
 
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .carousel-container {
   width: 100%;
-  position: relative;
-  overflow: hidden;
+  overflow-x: auto; /* Erlaubt horizontales Scrollen/Wischen */
+  scroll-shadow-properties: none;
+  scroll-snap-type: x mandatory; /* Aktiviert das Einrasten der Karten */
+  scroll-behavior: smooth;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   background: white;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
+/* Versteckt die Scrollleiste in allen Browsern, damit es sauber aussieht */
+.carousel-container::-webkit-scrollbar { display: none; }
+.carousel-container { -ms-overflow-style: none; scrollbar-width: none; }
 
 .carousel-container:hover {
   transform: translateY(-3px);
@@ -561,20 +573,14 @@ footer {
 
 .carousel-track {
   display: flex;
-  width: 300%; /* 3 Karten = 300% Breite */
-  /* 20 Sekunden Gesamtlaufzeit, unendlich im Kreis */
-  animation: cssSlider 20s infinite ease-in-out; 
-}
-
-/* Pausiert den Slider automatisch, wenn man mit der Maus darüber fährt */
-.carousel-track:hover {
-  animation-play-state: paused;
+  width: 100%;
 }
 
 .review-card {
-  width: 33.333%; /* Jede Karte nimmt genau ein Drittel der 300% ein */
+  min-width: 100%; /* Jede Karte füllt exakt den gesamten Container aus */
+  scroll-snap-align: center; /* Karte rastet genau mittig ein */
   box-sizing: border-box;
-  padding: 40px;
+  padding: 40px 60px;
   text-align: center;
 }
 
@@ -595,16 +601,29 @@ footer {
   font-size: 1rem;
 }
 
-/* DIE ANIMATION: Stehen bleiben bei 0%, 30% und 65% */
-@keyframes cssSlider {
-  0%, 30% { transform: translateX(0); }                  /* Karte 1 zeigt sich */
-  35%, 65% { transform: translateX(-33.333%); }          /* Karte 2 zeigt sich */
-  70%, 95% { transform: translateX(-66.666%); }          /* Karte 3 zeigt sich */
-  100% { transform: translateX(0); }                     /* Sanfter Sprung zurück zum Start */
+/* UNIVERSELLE PFEILE LINKS & RECHTS */
+.carousel-wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  color: #cfe3cf; /* Dein helles Linien-Grün */
+  transition: color 0.2s, transform 0.2s;
+  z-index: 10;
+  user-select: none;
+}
+
+.carousel-wrapper .prev-arrow { left: 20px; }
+.carousel-wrapper .next-arrow { right: 20px; }
+
+.carousel-wrapper .arrow:hover {
+  color: #3a7d44; /* Dein Waldgrün beim Drüberfahren */
+  transform: translateY(-50%) scale(1.15);
 }
 
 /* Mobil-Optimierung */
 @media (max-width: 480px) {
-  .review-card { padding: 25px 20px; }
+  .review-card { padding: 35px 35px; }
   .review-text { font-size: 0.95rem; line-height: 1.5; }
+  .carousel-wrapper .arrow { font-size: 1.4rem; }
 }
